@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clothings e-commerce website</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section id="header">
+        <div class="logo-nav-namburger-wrapper">
+            <a href="#" class="logo">blaqMarket</a>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="/home" class="link">Home</a></li>
+                    <li><a href="/login" class="active link">login</a></li>
+                    <i class="fa-solid fa-xmark"></i>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div> 
+    </section>
+
+   <section id="login-form" class="section-mg section-pd">
+        {{#if ERROR}}
+            <h4>{{ERROR}}</h4>
+        {{/if}}
+        <h3>LOGIN HERE</h3>
+        <form action="/login" method="post">
+            
+            <input type="email" name="email" id="email" required placeholder="enter your email">
+            <input type="password" name="password" id="password" required placeholder="enter your password">
+            <button type="submit" class="normal">Login</button>
+        </form>
+
+        <p>have no accout?: <a href="/register">click here to register</a></p>
+   </section>
+    
+
+
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

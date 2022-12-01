@@ -1,0 +1,127 @@
+
+    <section id="product-details" class="section-pd">
+        <div class="product-single-image">
+            <img src="{{oneProduct.image}}" alt="" width="100%" id="mainImage">
+            <div class="small-img-group">
+                <div class="sm-img-col">
+                    <img src="{{oneProduct.image}}" alt="" width="100%" class="small-img">
+                </div>
+                <div class="sm-img-col">
+                    <img src="{{oneProduct.image}}" alt="" width="100%" class="small-img">
+                </div>
+                <div class="sm-img-col">
+                    <img src="{{oneProduct.image}}" alt="" width="100%" class="small-img">
+                </div>
+                <div class="sm-img-col">
+                    <img src="{{oneProduct.image}}" alt="" width="100%" class="small-img">
+                </div>
+            </div>
+        </div>
+
+        <div class="single-pro-writeup">
+            <form action="/cart/{{oneProduct._id}}" enctype="multipart/form-data" method="post">
+                    <h6>T-SHIRT</h6>
+                    <h4>{{oneProduct.name}}</h4>
+                    <h2>&#8358; {{oneProduct.price}}</h2>
+                    <select name="size">
+                        <option>select size</option>
+                        <option>large</option>
+                        <option>xlarge</option>
+                        <option>xxlarge</option>
+                        <option>medium</option>
+                    </select>
+                    <input type="number" value="1" name="quantity">
+                    <button class="normal">add to cart</button>
+                    <h4>product details</h4>
+                    <span>{{oneProduct.description}}</span>
+            </form>
+        </div>
+
+    </section>
+
+    <section id="products" class="section-mg section-pd">
+        <div class="products-title">
+          <h1>Featured Products</h1>
+          <p>collections of New modern designs</p>
+        </div>
+        <div class="product-container">
+              <div class="product">
+                  <img src="/images/t-shirt-1.avif" alt="">
+                  <div class="product-desc">
+                      <span>Adidas</span>
+                      <h5>carton astronaut T-shirts</h5>
+                      <div class="star">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>   
+                      <h4 class="price">#6700</h4>
+                  </div>
+  
+                  <a href="#"><i class="fa-regular fa-bag-shopping"></i></a>
+                  
+              </div>
+              <div class="product">
+                  <img src="/images/shirt-14.jpg" alt="">
+                  <div class="product-desc">
+                      <span>Adidas</span>
+                      <h5>carton astronaut T-shirts</h5>
+                      <div class="star">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>   
+                      <h4 class="price">#6700</h4>
+                  </div>
+                  <a href="#"><i class="fal fa-shopping-cart"></i></a>
+              </div>
+              <div class="product">
+                  <img src="/images/t-shirt-2.avif" alt="">
+                  <div class="product-desc">
+                      <span>Adidas</span>
+                      <h5>carton astronaut T-shirts</h5>
+                      <div class="star">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>   
+                      <h4 class="price">#6700</h4>
+                  </div>
+                  <a href="#"><i class="fal fa-shopping-cart"></i></a>
+              </div>
+              <div class="product">
+                  <img src="/images/t-shirt-1.avif" alt="">
+                  <div class="product-desc">
+                      <span>Adidas</span>
+                      <h5>carton astronaut T-shirts</h5>
+                      <div class="star">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>   
+                      <h4 class="price">#6700</h4>
+                  </div>
+                  <a href="#"><i class="fal fa-shopping-cart"></i></a>
+              </div>
+        </div>
+  </section>
+
+    <section id="news-banner" class="section-pd section-mg">
+        <div class="news-text-content">
+            <h4>sign up to get updated on new products and discounts</h4>
+            <p>get E-mail updates about our latest shops and <span>special offer</span></p>
+        </div>
+        <div class="news-input-form">
+            <input type="email" name="email" id="email" placeholder="enter your email">
+            <button type="submit" class="">sign up</button>
+        </div>
+    </section>
+

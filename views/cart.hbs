@@ -1,0 +1,78 @@
+
+
+    <section id="contact-page-header-banner">
+        <h2>#let's Talk and Negotiate</h2>
+        <p>leave a message. we will always respond.</p>
+    </section>
+
+    <section id="cart-page" class="section-pd section-mg">
+        
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Size</td>
+                    <td>Quantity</td>
+                    <td>Sub-Total</td>
+                </tr>
+            </thead>
+            
+            <tbody>
+                {{#each goodsToBuyProducts}}
+                <tr>
+                    <td><a href="/cart/{{_id}}/delete"> <i class="far fa-times-circle"></i></a></td>
+                    <td><img src="{{product.image}}" alt=""></td>
+                    <td>{{product.name}}</td>
+                    <td id="priceTag">&#8358;{{product.price}}</td>
+                    <td>{{size}}</td>
+                    <td><input type="number" name="productQuantity" id="priceQuantity" value="{{quantity}}"></td>
+                    <td id="priceResult">&#8358; {{subPriceTotal}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+               
+       
+    </section>
+     <section id="cart-goods-sum" class="section-pd section-mg"> 
+                    <div id="coupon">
+                        <h3>Apply Coupon</h3>
+                        <div class="input-container">
+                            <input type="text" name="" id="">
+                            <button type="submit" class="normal">Apply</button>
+                        </div>
+                    </div>
+                    <div id="product-calc-wrapper">
+                        <h3>Cart Total</h3>
+                        <form action="/order/checkout/paystack" method="post">
+                            <table>
+                                <tr>
+                                    <td>cart subtotal</td>
+                                    <td>&#8358; <input type="number" name="subPrice" value="{{total}}" id=""></td>
+                                </tr>
+                                <tr>
+                                    <td>waybill</td>
+                                    <td>free</td>
+                                </tr>
+                                <tr>
+                                    <td>total products</td>
+                                    <td><input type="text" name="" id="" value=""></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Total</strong></td>
+                                    <td>&#8358; <input type="number" name="totaPrice" value="{{total}}" id=""></td>
+                                </tr>
+                            </table>
+                            <button type="submit" class="normal">Proceed To Check-out</button>
+                         </form>
+                    </div>
+    </section>
+
+    
+        
+
+    
+

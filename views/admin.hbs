@@ -1,0 +1,66 @@
+
+
+        <section id="admin-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <td>messages</td>
+                        <td>Orders({{totalOrders}})</td>
+                        <td>users({{allUsers}})</td>
+                        <td>products({{totalProducts}})</td>
+                    </tr>
+                </thead>
+            </table>
+
+            <table>
+                <thead id="unique">
+                    <tr>
+                        <th>ORDERS</th>
+                    </tr>
+                </thead>
+               
+            </table>
+            <table>
+                 <thead>
+                    <tr>
+                        <th>USER EMAIL</th>
+                        <th>
+                             <tr>
+                                <th>PRODUCT NAME</th>
+                                <th>PREFERED SIZE</th>
+                                <th>PRODUCT QUANTITY</th>
+                                <th>SUB TOTAL</th>
+                            </tr>
+                        </th>
+                        <th>AMOUNT PAID</th>
+                        <th>STATUS</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                   {{#each ordersDetails}}
+                    <tr>
+                        <td>{{customer}}</td>
+                        {{#each products}}
+                        <td>
+                            <tr>
+                                <td>{{product}}</td>
+                                <td>{{size}}</td>
+                                <td>{{quantity}}</td>
+                                <td>{{subPriceTotal}}</td>
+                            </tr>
+                        </td>
+                        {{/each}}
+                        <td>&#8358;{{amountPayed}}</td>
+                        <td>{{paymentStatus}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </section>
+
+
+
+
+
+

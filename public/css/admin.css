@@ -1,0 +1,244 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "leaque spartan" sans-serif;
+    text-transform: capitalize;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* admin section styling */
+#admin-section-container{
+    width: 100%;
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+    position: relative;
+}
+#admin-menu-container{
+    width: 16%;
+    height: 100vh;
+    margin-right: 50px;
+    padding-left: 30px;
+    background-color:#E3E6F3;
+    position: fixed;
+    top:58px;
+    left: 0;
+}
+#admin-menu-container h4{
+    margin-bottom: 40px;
+    color: #000;
+    font-size: 17px;
+}
+#admin-menu-container ul{
+    display: block;
+
+}
+#admin-menu-container ul li{
+    margin-bottom: 40px;
+}
+#admin-menu-container ul li a{
+    color: #000;
+}
+
+#admin-table-container{
+    width: 80%;
+    position: absolute;
+    left: 230px;
+    top: 75px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+#admin-table-container table{
+    width: 1000px;
+    border-collapse:collapse;
+    table-layout: fixed;
+    white-space: wrap;
+}
+#admin-table-container table, #admin-table-container thead,#admin-table-container tr,#admin-table-container td{
+    border: 1px solid #E3E6F3;
+}
+#admin-table-container  td{
+    width: fit-content;
+    font-size: 14px;
+}
+
+#admin-table-container table #unique tr th{
+    width: 800px;
+    height: 30px;
+    text-align: center;
+}
+
+/* product add stylings */
+#admin-add-product-container{
+    width: 70%;
+    position: absolute;
+    left: 240px;
+    top: 50px;
+}
+#admin-add-product-container form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#admin-add-product-container form input{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+#admin-add-product-container form textarea{
+    width: 100%;
+}
+#admin-add-product-container form button{
+    background-color: #088178;
+}
+
+/* product editpage styling */
+#admin-edit-product-container{
+    width: 75%;
+    position: absolute;
+    left:250px;
+    top: 0px;
+}
+#admin-edit-product-container form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#admin-edit-product-container form input{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+#admin-edit-product-container form textarea{
+    width: 100%;
+}
+#admin-edit-product-container form button{
+    background-color: #088178;
+}
+
+/* admin products page */
+#admin-table-container img{
+    width: 70px;
+    height: 70px;
+
+}
+#admin-table-container button{
+    background-color: #088178;
+    width: 47px;
+    height: 30px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 10px;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+#admin-table-container button a{
+    text-align: center;
+    font-size: 10px;
+    color: #fff;
+}
+#admin-table-container #button-table-data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0px;
+    margin-top: 20px;
+    margin-left: 12px;
+}
+#admin-table-container form{
+    width: 80px;
+}
+
+
+@media (max-width:899px){
+    #admin-table-container{  
+        left: 140px; 
+    }
+   
+    #admin-table-container table{
+        width: 700px;
+        border-collapse: collapse;
+        table-layout:auto;
+        white-space: wrap;
+    }
+    #admin-add-product-container{
+        width: 70%;
+        left:140px;
+    }
+    #admin-edit-product-container{
+        width: 70%;
+        left:140px
+    }
+}
+
+
+@media (max-width:799px){
+    #admin-add-product-container{
+        width: 70%;
+    }
+    #admin-edit-product-container{
+        width: 70%;
+    }
+    #admin-menu-container{
+      top:46px;
+    }
+    #admin-table-container{  
+        left: 150px; 
+    }
+   
+    #admin-table-container table{
+        width: 800px;
+        border-collapse: collapse;
+        table-layout:auto;
+        white-space: wrap;
+    }
+}
+
+@media (max-width:477px) {
+    #admin-menu-container{
+        width: 100px;
+        padding-left: 5px; 
+        top:39px   
+    }
+    #admin-menu-container h4{
+        font-size: 10px;    
+    }
+    #admin-add-product-container{
+        width: 50%;
+    }
+    #admin-edit-product-container{
+        width: 50%;
+    }
+    #admin-table-container,#admin-add-product-container,#admin-edit-product-container{
+        left: 115px;
+      
+    
+    }
+    #admin-table-container{
+        width: 67%;
+        position: absolute;
+        left: 120px;
+    }
+    #admin-table-container table{
+        width: 580px;
+    }
+    #admin-table-container table #unique tr th{
+        width: 580px;
+        
+    }
+    
+}

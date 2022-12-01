@@ -1,0 +1,56 @@
+
+    <section id="shops-page-header-banner">
+        <h2>#UNIQUE PRODUCTS</h2>
+        <p>save more with coupons & up to 70% off!</p>
+    </section>
+ 
+    <section id="products" class="section-mg section-pd">
+          <div class="product-container">
+                {{#each products}}
+                <div class="product">
+                    <img src="{{image}}" alt="">
+                    <div class="product-desc">
+                        <span>Adidas</span>
+                        <h5>{{name}}</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>   
+                        <h4 class="price">&#8358;{{price}}</h4>
+                    </div>
+    
+                    <a href="/product/{{_id}}/show"><i class="fa-regular fa-bag-shopping"></i></a>   
+                </div>
+                {{/each}}
+            </div>
+            
+            <div id="pagination-container" class="section-mg section-pd">
+                {{#if previous}}
+                    <button class="normal"><a href="/product/get?page={{previous}}">previous page</a></button>
+                {{/if}}
+
+                {{#each pages}}
+                <span><a href="/product/get?page={{pageNumber}}"><strong>{{pageNumber}}</strong></a></span>
+                {{/each}}
+                
+                {{#if next}}
+                    <button class="normal"><a href="/product/get?page={{next}}">next page</a></button>
+                {{/if}}
+            </div>
+    </section>
+
+    <section id="news-banner" class="section-pd section-mg">
+        <div class="news-text-content">
+            <h4>sign up to get updated on new products and discounts</h4>
+            <p>get E-mail updates about our latest shops and <span>special offer</span></p>
+        </div>
+        <div class="news-input-form">
+            <input type="email" name="email" id="email" placeholder="enter your email">
+            <button type="submit" class="">sign up</button>
+        </div>
+    </section>
+
+ 

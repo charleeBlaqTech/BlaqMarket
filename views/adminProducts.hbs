@@ -1,0 +1,54 @@
+
+
+        <section id="admin-table-container">
+
+            <table>
+                <thead id="unique">
+                    <tr>
+                        <th>ALL PRODUCTS</th>
+                    </tr>
+                </thead>
+               
+            </table>
+            <table>
+                 <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>IMAGE</th>
+                        <th>PRICE</th>
+                        <th>DATE</th>    
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    {{#each products}}
+                     <tr>
+                        <td>{{name}}</td>
+                        <td><img src="{{image}}" alt=""></td>
+                        <td>&#8358; {{price}}</td>
+                        <td>{{posted}}</td>
+                        <td id="button-table-data">
+                        <button><a href="/admin/{{_id}}/update">EDIT</a></button>
+                        <form action="/product/{{_id}}/delete?_method=DELETE" method="post">
+                        <button type="submit">DELETE</button>
+                        </form>
+                        </td>
+                    </tr>            
+                    {{/each}}
+                </tbody>  
+            </table>
+
+            <div id="pagination-container" class="section-mg section-pd">
+                {{#if previous}}
+                    <button class="normal"><a href="/admin/products?page={{previous}}">previous page</a></button>
+                {{/if}}
+
+                {{#each pages}}
+                <span><a href="/admin/products?page={{pageNumber}}"><strong>{{pageNumber}}</strong></a></span>
+                {{/each}}
+                
+                {{#if next}}
+                    <button class="normal"><a href="/admin/products?page={{next}}">next page</a></button>
+                {{/if}}
+            </div>
+        </section>

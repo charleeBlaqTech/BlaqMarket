@@ -1,0 +1,11 @@
+
+
+        <section id="admin-edit-product-container">
+            <form action="/product/{{theProduct._id}}/update?_method=PUT" enctype="multipart/form-data" method="post">
+                <input type="text" name="productName" value="{{theProduct.name}}" placeholder="product name" required>
+                <input type="number" name="price" id="" value="{{theProduct.price}}" placeholder="product price in naira" required>
+                <textarea name="description" id="" cols="30" rows="10" placeholder="procuct description" required>{{theProduct.description}}</textarea>
+                <button type="submit" class="normal">Update</button>
+            </form>
+        </section>
+
