@@ -11,6 +11,7 @@ const homeRoutesRouter      =require('./routes/homeRoutes')
 const productsRoutesRouter  =require('./routes/productRoute')
 const adminRoutesRouter     =require('./routes/adminRoutes')
 const paymentRoutesRouter   =require('./routes/checkout')
+mongoose.connect("mongodb+srv://charleeblaq:charleeblaq1994@cluster0.nh33n48.mongodb.net/blaqMarket_db")
 
 
 
