@@ -9,8 +9,8 @@ const order             =require('../models/orderModel')
 const cart              =require('../models/cartModel')
 
 
-const paystackkey=process.env.PAY_STACK_KEY
-const environment=process.env.PAY_STACK_ENV
+const paystackkey=process.env.PAY_STACK_KEY || "sk_test_9a848ee230af89c86d4d9dd29f31db41cedc71be"
+const environment=process.env.PAY_STACK_ENV || 'development'
 const paystack= new paystackNode(paystackkey, environment)
 
 

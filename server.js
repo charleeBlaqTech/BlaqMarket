@@ -42,6 +42,4 @@ app.use("/order",paymentRoutesRouter)
 
 
 
-app.listen(process.env.PORT, ()=>{
-    console.log('connected to PORT 4500')
-})
+app.listen(process.env.PORT || 4500)
